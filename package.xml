@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="de.julian-pfeil.diceBBCode.shoutbox" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/package.xsd">
+	<packageinformation>
+		<packagename>Dice-BBCode: Shoutbox-Extension</packagename>
+		<packagename language="de">Würfel-BBCode: Shoutbox-Erweiterung</packagename>
+		<packagedescription>Implements the Dice-BBCode-button in the shoutboxes editor.</packagedescription>
+		<packagedescription language="de">Implementiert den Würfel-BBCode-Button im Editor der Shoutbox.</packagedescription>
+		<version>1.0.0</version>
+        <date>2022-11-14</date>
+		<packageurl><![CDATA[https://darkwood.design/store/user-file-list/1298-julian-pfeil/]]></packageurl>
+	</packageinformation>
+
+	<authorinformation>
+        <author>Julian Pfeil</author>
+        <authorurl>https://julian-pfeil.de</authorurl>
+	</authorinformation>
+
+	<requiredpackages>
+		<requiredpackage minversion="5.5.0">com.woltlab.wcf</requiredpackage>
+		<requiredpackage minversion="5.5.4">de.darkwood-studios.wcf.shoutbox</requiredpackage>
+	</requiredpackages>
+
+	<excludedpackages>
+		<excludedpackage version="6.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+	</excludedpackages>
+
+	<instructions type="install">
+		<instruction type="templateListener"/>
+	</instructions>
+
+	<instructions type="update" fromversion="*">
+		<instruction type="templateListener"/>
+	</instructions>
+</package>

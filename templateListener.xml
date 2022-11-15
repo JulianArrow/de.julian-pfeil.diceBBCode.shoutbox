@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/typhoon/templateListener.xsd">
+    <import>
+        <!-- user -->
+        <templatelistener name="pluginInclude">
+            <environment>user</environment>
+            <templatename>shoutboxWysiwyg</templatename>
+            <eventname>redactorJavaScript</eventname>
+            <templatecode><![CDATA[,'{@$__wcf->getPath()}js/3rdParty/redactor2/plugins/Dice.js?v={@LAST_UPDATE_TIME}']]></templatecode>
+        </templatelistener>
+
+        <templatelistener name="pluginInit">
+            <environment>user</environment>
+            <templatename>shoutboxWysiwyg</templatename>
+            <eventname>redactorConfig</eventname>
+            <templatecode><![CDATA[{if $__wcf->getBBCodeHandler()->isAvailableBBCode('dice')}
+    // button options
+    buttonOptions['dice'] = {
+        icon: 'fa-cube',
+        title: '{jslang}wcf.diceBBCode.button.label{/jslang}'
+    };
+
+    // add button
+    buttonMobile.push('dice');
+    buttons.push('dice');
+
+    // add plugin
+    config.plugins.push('Dice');
+    {/if}]]></templatecode>
+        </templatelistener>
+        <!-- /user -->
+    </import>
+</data>
